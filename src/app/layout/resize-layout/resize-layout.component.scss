@@ -1,0 +1,41 @@
+.dot {
+  height: 0.3rem;
+  width: 0.3rem;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0;
+}
+
+.resizer[data-direction="row"] {
+  background-color: #cbd5e0;
+  cursor: ew-resize;
+  height: 100%;
+  width: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  .dot {
+    margin: 0.4rem 0;
+  }
+}
+.resizer[data-direction="column"] {
+  background-color: #cbd5e0;
+  cursor: ns-resize;
+  height: 0.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  .dot {
+    margin: 0 0.4rem;
+  }
+}
+
+.resizer:hover,
+.resizer:active {
+  background-color: dodgerblue;
+  p {
+    background-color: #cbd5e0;
+  }
+}
